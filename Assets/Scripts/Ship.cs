@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -9,11 +10,12 @@ public class Ship : Spawnable
     public int life;
     public List<TypeAmmo> weapons;
 
-    private float timeElapsed;
+    protected float timeElapsed;
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
-        
+        base.Start();
+        this.gameObject.tag = "Ship";
     }
 
     // Update is called once per frame
@@ -34,12 +36,25 @@ public class Ship : Spawnable
                 ammo.speed = weapons[i].speed;
                 render.sprite = weapons[i].sprite;
                 obj.transform.localScale = new Vector3(0.015f, 0.015f, 0);
-                obj.AddComponent<PolygonCollider2D>();
+                obj.layer = 9;
             }
         }
         else
         {
             timeElapsed += Time.deltaTime;
+        }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            life -= other.gameObject.GetComponent<Ammo>().damage;
+        }
+        else if (other.gameObject.CompareTag("EnemyShip"))
+        {
+            other.gameObject.GetComponent<EnemyShip>().life -= this.value;
+            Destroy(this.gameObject);
         }
     }
 }

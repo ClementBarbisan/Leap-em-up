@@ -9,9 +9,9 @@ public class SpawnGenerator:MonoBehaviour
 {
     private PathShip _currentPath;
     [SerializeField] 
-    private List<TypeShip> _spawnables;
+    private List<TypeObject> _spawnables;
     [SerializeField]
-    private TypeShip _currentSpawnable;
+    private TypeObject _currentSpawnable;
     private void Awake()
     {
         _currentPath = GetComponent<PathShip>();
@@ -20,6 +20,8 @@ public class SpawnGenerator:MonoBehaviour
 
     public void Generate()
     {
+        if (_currentPath.path.Count <= 0)
+            return;
         GameObject obj = new GameObject("Spawnable");
         obj.transform.position = new Vector3(0.25f, Hands.Right.WristPosition.y, 0);
         SpriteRenderer render = obj.AddComponent<SpriteRenderer>();

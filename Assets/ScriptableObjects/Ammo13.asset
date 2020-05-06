@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aa58b71c5c0568459c0fa971c3fc295, type: 3}
-  m_Name: Ammo12
+  m_Name: Ammo13
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17ab7143c638a1947b1d20b788499284, type: 3}
   name: 
   speed: 0.1
   damage: 1
-  angle: 360
+  angle: 0

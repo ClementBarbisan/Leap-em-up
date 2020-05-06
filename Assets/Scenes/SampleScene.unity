@@ -139,6 +139,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: ship1
       objectReference: {fileID: 0}
+    - target: {fileID: 8123336422381068539, guid: 1ef7e462679ac2742af7ebad8f02ec81,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyShip
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123336422381068539, guid: 1ef7e462679ac2742af7ebad8f02ec81,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8237420773431369647, guid: 1ef7e462679ac2742af7ebad8f02ec81,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -699,7 +709,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Period: 0.1
-  HandModel: {fileID: 0}
+  HandModel: {fileID: 128350064}
   Thumb: 2
   Index: 0
   Middle: 1
@@ -738,7 +748,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Period: 0.1
-  HandModel: {fileID: 0}
+  HandModel: {fileID: 128350064}
   Thumb: 2
   Index: 0
   Middle: 0
@@ -777,7 +787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Period: 0.1
-  HandModel: {fileID: 0}
+  HandModel: {fileID: 128350064}
   Thumb: 2
   Index: 1
   Middle: 0
@@ -1695,6 +1705,33 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 11471522, guid: b9c7aaf0d314cb847a3b2a20e893f1b6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b9c7aaf0d314cb847a3b2a20e893f1b6, type: 3}
+--- !u!1 &1267341920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8123336422381068539, guid: 1ef7e462679ac2742af7ebad8f02ec81,
+    type: 3}
+  m_PrefabInstance: {fileID: 66511359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1267341924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267341920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7ba290908886d45a2d3a7fa01d74bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: []
+  value: 0
+  speed: 0
+  shiftUpdate: 0.01
+  distance: 0.001
+  speedFire: 0.5
+  life: 0
+  weapons:
+  - {fileID: 11400000, guid: 1f43919bbf026864e804c7a358cfce4c, type: 2}
 --- !u!1 &1311581891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1920,6 +1957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnables:
   - {fileID: 11400000, guid: 2e2588a1e86e2d3478861680d5e4006b, type: 2}
+  - {fileID: 11400000, guid: 9749f5e6e59fab3428419bdd59c86aab, type: 2}
   _currentSpawnable: {fileID: 11400000, guid: 2e2588a1e86e2d3478861680d5e4006b, type: 2}
 --- !u!114 &1714312386
 MonoBehaviour:

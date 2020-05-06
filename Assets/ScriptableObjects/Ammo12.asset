@@ -16,4 +16,4 @@ MonoBehaviour:
   name: 
   speed: 0.1
   damage: 1
-  angle: 360
+  angle: 30

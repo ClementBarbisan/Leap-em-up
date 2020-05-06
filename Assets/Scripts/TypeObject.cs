@@ -7,9 +7,9 @@ public enum TypeSpawnable
     Ship,
     Bonus
 }
-[CreateAssetMenu(fileName = "Ship", menuName = "ScriptableObjects/TypeShip", order = 1)]
+[CreateAssetMenu(fileName = "Ship", menuName = "ScriptableObjects/TypeObject", order = 1)]
 
-public class TypeShip : ScriptableObject
+public class TypeObject : ScriptableObject
 {
     public TypeSpawnable type;
     public int value;

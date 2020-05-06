@@ -14,6 +14,12 @@ public class Spawnable : MonoBehaviour
     private int _index = 0;
     public float shiftUpdate= 0.01f;
     public float distance = 0.001f;
+
+    protected void Start()
+    {
+        this.gameObject.layer = 9;
+    }
+
     protected void Update()
     {
         if (this.transform.position.x < -0.5f)

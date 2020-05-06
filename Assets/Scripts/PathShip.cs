@@ -34,8 +34,6 @@ public class PathShip : MonoBehaviour
     
     public void NewPath()
     {
-        if (path.Count < limit && path.Count > 0)
-            return;
         path.Clear();
         _savePath = StartCoroutine(currentPath());
     }
