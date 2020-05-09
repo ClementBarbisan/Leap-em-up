@@ -39,7 +39,7 @@ public class SpawnGenerator:MonoBehaviour
             currentShip.transform.localScale = new Vector3(0.015f, 0.015f, 0);
             currentShip.ammoPrefab = _currentSpawnable.prefab;
         }
-        else if (_currentSpawnable.type == TypeSpawnable.Bonus)
+        else if (_currentSpawnable.type == TypeSpawnable.Bonus && UIScript.Instance.bonus >= 1)
         {
             Bonus currentBonus = obj.AddComponent<Bonus>();
             currentBonus.path = new List<Vector3>(_currentPath.path);
@@ -85,5 +85,6 @@ public class SpawnGenerator:MonoBehaviour
         if (index >= _spawnables.Count)
             return;
         _currentSpawnable = _spawnables[index];
+        UIScript.Instance.SetSprite(_currentSpawnable.sprite);
     }
 }

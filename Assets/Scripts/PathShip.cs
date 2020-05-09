@@ -33,6 +33,11 @@ public class PathShip : MonoBehaviour
             yield return new WaitForSeconds(_timeBetweenPoint);
         }
     }
+
+    public void resetPath()
+    {
+        path.Clear();
+    }
     
     public void NewPath()
     {

@@ -60,7 +60,7 @@ public class Ship : Spawnable
         }
         else if (other.gameObject.CompareTag("Collectible"))
         {
-            UIScript.chest++;
+            UIScript.Instance.chest++;
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("PreBonus"))

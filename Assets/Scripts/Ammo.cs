@@ -30,7 +30,7 @@ public class Ammo : MonoBehaviour
         {
             EnemyShip enemy = other.gameObject.GetComponent<EnemyShip>();
             enemy.life -= damage;
-            UIScript.RemainingTime += timeGain;
+            UIScript.Instance.remainingTime += timeGain;
             enemy.nbHits++;
             Destroy(this.gameObject);
         }

@@ -20,6 +20,7 @@ public class Bonus : Spawnable
         base.Start();
         this.gameObject.tag = "Bonus";
         this.gameObject.layer = 13;
+        UIScript.Instance.bonus--;
         // this.transform.localScale = new Vector3(0.015f, 0.015f, 0);
     }
 
