@@ -16,6 +16,8 @@ public class PathShip : MonoBehaviour
     private RiggedFinger finger;
     [SerializeField]
     private int limit = 10;
+
+    private float _startTime = 0;
     private void Awake()
     {
         path = new List<Vector3>();
@@ -45,9 +47,13 @@ public class PathShip : MonoBehaviour
         if (_savePath != null)
         {
             StopCoroutine(_savePath);
+
+            float distTotal = Vector3.Distance(path[path.Count - 1], path[0]);
             while (Vector3.Distance(path[path.Count - 1], path[0]) > _distanceBetweenPoint)
             {
-                path.Add(Vector3.Lerp(path[path.Count - 1], path[0], 0.5f));
+                float distCovered = (Time.time - _startTime) * _distanceBetweenPoint;
+                float part = distCovered / distTotal;
+                path.Add(Vector3.Lerp(path[path.Count - 1], path[0], part));
             }
         }
     }

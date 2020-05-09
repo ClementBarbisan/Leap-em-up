@@ -11,32 +11,38 @@ public class Ship : Spawnable
     public List<TypeAmmo> weapons;
 
     protected float timeElapsed;
+
+    public GameObject ammoPrefab;
     // Start is called before the first frame update
     protected void Start()
     {
         base.Start();
         this.gameObject.tag = "Ship";
+        Rigidbody2D body = gameObject.AddComponent<Rigidbody2D>();
+        body.gravityScale = 0;
+        body.mass = 0;
+        body.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     // Update is called once per frame
     void Update()
     {
         base.Update();
+        if (life <= 0)
+            Destroy(this.gameObject);
         if (timeElapsed >= speedFire)
         {
             timeElapsed = 0;
             for (int i = 0; i < weapons.Count; i++)
             {
-                GameObject obj = new GameObject("Ammo");
+                GameObject obj = Instantiate(ammoPrefab);
                 obj.transform.position = this.transform.position;
-                SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
-                Ammo ammo = obj.AddComponent<Ammo>();
+                Ammo ammo = obj.GetComponent<Ammo>();
                 ammo.damage = weapons[i].damage;
                 ammo.direction = weapons[i].angle;
                 ammo.speed = weapons[i].speed;
-                render.sprite = weapons[i].sprite;
-                obj.transform.localScale = new Vector3(0.015f, 0.015f, 0);
-                obj.layer = 9;
+                ammo.timeGain = weapons[i].timeGain;
+                ammo.transform.position += weapons[i].relativePos;
             }
         }
         else
@@ -45,16 +51,17 @@ public class Ship : Spawnable
         }
     }
     
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            life -= other.gameObject.GetComponent<Ammo>().damage;
-        }
-        else if (other.gameObject.CompareTag("EnemyShip"))
+        if (other.gameObject.CompareTag("EnemyShip"))
         {
             other.gameObject.GetComponent<EnemyShip>().life -= this.value;
             Destroy(this.gameObject);
+        }
+        else if (other.gameObject.CompareTag("Collectible"))
+        {
+            UIScript.chest++;
+            Destroy(other.gameObject);
         }
     }
 }

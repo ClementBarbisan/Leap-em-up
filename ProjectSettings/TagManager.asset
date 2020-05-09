@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Ship
   - Bonus
-  - Enemy
   - EnemyShip
   - Ammo
+  - EnemyAmmo
+  - Collectible
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - 
   - Enemy
   - Player
-  - 
-  - 
-  - 
+  - AmmoEnemy
+  - AmmoPlayer
+  - Collectible
   - 
   - 
   - 

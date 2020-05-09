@@ -20,13 +20,12 @@ public class SpawnGenerator:MonoBehaviour
 
     public void Generate()
     {
-        if (_currentPath.path.Count <= 0)
-            return;
         GameObject obj = new GameObject("Spawnable");
         obj.transform.position = new Vector3(0.25f, Hands.Right.WristPosition.y, 0);
         SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
         render.sprite = _currentSpawnable.sprite;
-        obj.AddComponent<PolygonCollider2D>();
+        BoxCollider2D collider = obj.AddComponent<BoxCollider2D>();
+        collider.size = Vector2.one;
         if (_currentSpawnable.type == TypeSpawnable.Ship)
         {
             Ship currentShip = obj.AddComponent<Ship>();
@@ -37,7 +36,8 @@ public class SpawnGenerator:MonoBehaviour
             currentShip.speed = _currentSpawnable.speed;
             currentShip.distance = _currentSpawnable.distance;
             currentShip.shiftUpdate = _currentSpawnable.shiftUpdate;
-            obj.tag = "Ship";
+            currentShip.transform.localScale = new Vector3(0.015f, 0.015f, 0);
+            currentShip.ammoPrefab = _currentSpawnable.ammoPrefab;
         }
         else if (_currentSpawnable.type == TypeSpawnable.Bonus)
         {
@@ -47,10 +47,10 @@ public class SpawnGenerator:MonoBehaviour
             currentBonus.distance = _currentSpawnable.distance;
             currentBonus.speed = _currentSpawnable.speed;
             currentBonus.value = _currentSpawnable.value;
-            obj.tag = "Bonus";
+            currentBonus.time = _currentSpawnable.time;
+            currentBonus.transform.localScale = new Vector3(0.015f, 0.015f, 0);
         }
 
-        obj.transform.localScale = new Vector3(0.015f, 0.015f, 0);
     }
 
     public void SetIndex(int index)

@@ -6,7 +6,8 @@ using UnityEngine;
 public class TypeAmmo : ScriptableObject
 {
      public Sprite sprite;
-     public string name;
+     public float timeGain;
+     public Vector3 relativePos;
      public float speed;
      public int damage;
      public int angle;

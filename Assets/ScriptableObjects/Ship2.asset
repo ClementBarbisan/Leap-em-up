@@ -13,12 +13,16 @@ MonoBehaviour:
   m_Name: Ship2
   m_EditorClassIdentifier: 
   type: 0
+  tag: 
   value: 0
   speed: 0.1
   shiftUpdate: 0.01
   distance: 0.001
   sprite: {fileID: 21300000, guid: 010058d3684c28540880c9a7d06b434c, type: 3}
-  speedFire: 0.5
-  life: 0
+  time: 0
+  speedFire: 0.4
+  life: 10
   weapons:
-  - {fileID: 11400000, guid: a7b28021ad94edd4dbc9e8a6f7e66a2c, type: 2}
+  - {fileID: 11400000, guid: d487078a76cf3554c9d2d5c8b2031927, type: 2}
+  - {fileID: 11400000, guid: 629c102be8b193c469fc6bb34a8a4116, type: 2}
+  prefab: {fileID: 3205742125460302687, guid: 50e43b0079cc7c7469df72e6b33a85b4, type: 3}

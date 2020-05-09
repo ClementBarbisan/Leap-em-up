@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ammo4
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17ab7143c638a1947b1d20b788499284, type: 3}
-  name: 
+  relativePos: {x: 0, y: -0.01, z: 0}
   speed: 0.1
   damage: 1
-  angle: 180
+  angle: 270
