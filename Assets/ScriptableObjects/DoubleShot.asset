@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7cc7e2c5ef7c345bba61bffd04d25d, type: 3}
-  m_Name: Bonus1
+  m_Name: DoubleShot
   m_EditorClassIdentifier: 
   type: 1
+  bonusType: 1
   tag: 
   value: 0
-  speed: 0
+  speed: 1
   shiftUpdate: 0.01
   distance: 0.001
-  sprite: {fileID: 0}
-  time: 0
+  sprite: {fileID: 8728385871782688290, guid: e582d9077c8de41418a4278040e75eb4, type: 3}
+  time: 12
   speedFire: 0
-  life: 0
+  life: 1
   weapons: []
-  prefab: {fileID: 0}
+  prefab: {fileID: 4929430692227048122, guid: 7ffa20ff64b563b4a91c9f8bdaa54d87, type: 3}

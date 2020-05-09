@@ -252,6 +252,7 @@
      <Compile Include="Assets\Scripts\EnemyShip.cs" />
      <Compile Include="Assets\Scripts\PathShip.cs" />
      <Compile Include="Assets\Scripts\PinchDetectorAdvanced.cs" />
+     <Compile Include="Assets\Scripts\PreBonus.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />
      <Compile Include="Assets\Scripts\Ship.cs" />
      <Compile Include="Assets\Scripts\SpawnGenerator.cs" />

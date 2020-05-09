@@ -34,5 +34,7 @@ public class Ammo : MonoBehaviour
             enemy.nbHits++;
             Destroy(this.gameObject);
         }
+        else if (other.gameObject.CompareTag("PreBonus"))
+            Destroy(this.gameObject);
     }
 }

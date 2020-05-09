@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f7cc7e2c5ef7c345bba61bffd04d25d, type: 3}
-  m_Name: Ship2
+  m_Name: Shield
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   tag: 
   value: 0
-  speed: 0.1
+  speed: 1
   shiftUpdate: 0.01
   distance: 0.001
-  sprite: {fileID: 21300000, guid: 010058d3684c28540880c9a7d06b434c, type: 3}
-  time: 0
-  speedFire: 0.4
-  life: 10
-  weapons:
-  - {fileID: 11400000, guid: d487078a76cf3554c9d2d5c8b2031927, type: 2}
-  - {fileID: 11400000, guid: 629c102be8b193c469fc6bb34a8a4116, type: 2}
-  prefab: {fileID: 3305971420253048920, guid: 50e43b0079cc7c7469df72e6b33a85b4, type: 3}
+  sprite: {fileID: 6526327882827294165, guid: e582d9077c8de41418a4278040e75eb4, type: 3}
+  time: 12
+  speedFire: 0
+  life: 1
+  weapons: []
+  prefab: {fileID: 7454849464388213784, guid: 84a93649faaac2c40aeb42f6b3f7aef0, type: 3}

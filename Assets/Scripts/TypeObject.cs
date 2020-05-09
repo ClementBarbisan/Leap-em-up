@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum TypeSpawnable
 {
@@ -12,6 +13,7 @@ public enum TypeSpawnable
 public class TypeObject : ScriptableObject
 {
     public TypeSpawnable type;
+    public BonusType bonusType;
     public string tag;
     public int value;
     public float speed;
@@ -22,5 +24,5 @@ public class TypeObject : ScriptableObject
     public float speedFire;
     public int life;
     public List<TypeAmmo> weapons;
-    public GameObject ammoPrefab;
+    [FormerlySerializedAs("ammoPrefab")] public GameObject prefab;
 }

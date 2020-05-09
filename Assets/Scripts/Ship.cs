@@ -63,5 +63,7 @@ public class Ship : Spawnable
             UIScript.chest++;
             Destroy(other.gameObject);
         }
+        else if (other.gameObject.CompareTag("PreBonus"))
+            Destroy(this.gameObject);
     }
 }

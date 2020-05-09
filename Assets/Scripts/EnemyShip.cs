@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -25,7 +26,7 @@ public class EnemyShip : Ship
     {
         if (life <= 0)
             Destroy(this.gameObject);
-        if (nbHits >= _nbHitsToGen || Input.GetKeyDown(KeyCode.A))
+        if (nbHits >= _nbHitsToGen)
         {
             nbHits = 0;
             Instantiate(collectible, this.transform.position, Quaternion.identity);
@@ -52,5 +53,7 @@ public class EnemyShip : Ship
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+       
+
     }
 }

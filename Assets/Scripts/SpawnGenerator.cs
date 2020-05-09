@@ -37,7 +37,7 @@ public class SpawnGenerator:MonoBehaviour
             currentShip.distance = _currentSpawnable.distance;
             currentShip.shiftUpdate = _currentSpawnable.shiftUpdate;
             currentShip.transform.localScale = new Vector3(0.015f, 0.015f, 0);
-            currentShip.ammoPrefab = _currentSpawnable.ammoPrefab;
+            currentShip.ammoPrefab = _currentSpawnable.prefab;
         }
         else if (_currentSpawnable.type == TypeSpawnable.Bonus)
         {
@@ -47,10 +47,37 @@ public class SpawnGenerator:MonoBehaviour
             currentBonus.distance = _currentSpawnable.distance;
             currentBonus.speed = _currentSpawnable.speed;
             currentBonus.value = _currentSpawnable.value;
-            currentBonus.time = _currentSpawnable.time;
+            currentBonus.time =  _currentSpawnable.time;
+            currentBonus.bonusChild = _currentSpawnable.prefab;
+            currentBonus.currentType = _currentSpawnable.bonusType;
+            currentBonus.bonusChild.GetComponent<PreBonus>().time = _currentSpawnable.time;
             currentBonus.transform.localScale = new Vector3(0.015f, 0.015f, 0);
         }
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            _currentSpawnable = _spawnables[0];
+            Generate();
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            _currentSpawnable = _spawnables[1];
+            Generate();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            _currentSpawnable = _spawnables[2];
+            Generate();
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            _currentSpawnable = _spawnables[3];
+            Generate();
+        }
     }
 
     public void SetIndex(int index)

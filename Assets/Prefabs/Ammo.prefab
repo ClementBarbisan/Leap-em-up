@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 9122357160471642718}
   - component: {fileID: 4195294602857191563}
   - component: {fileID: 1906458724932190933}
-  - component: {fileID: 4626272261089198663}
   - component: {fileID: 7959247746899972607}
   m_Layer: 11
-  m_Name: Ammo Variant
+  m_Name: Ammo
   m_TagString: Ammo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,27 +120,6 @@ PolygonCollider2D:
       - {x: 0.02, y: -0.38}
       - {x: 0.02, y: 0}
       - {x: -0.01, y: 0.03}
---- !u!50 &4626272261089198663
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3305971420253048920}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!114 &7959247746899972607
 MonoBehaviour:
   m_ObjectHideFlags: 0

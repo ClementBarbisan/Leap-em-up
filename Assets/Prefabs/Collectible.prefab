@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4997184980582505788}
   - component: {fileID: -3473654135365050142}
   - component: {fileID: -1801780150871044885}
-  - component: {fileID: 1041831120671502616}
   m_Layer: 12
   m_Name: Collectible
   m_TagString: Collectible
@@ -96,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875fc8d4644c3094696486105328d55a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dist: 0.1
-  speed: 0.075
+  _dist: 0.1
+  _speed: 0.075
 --- !u!58 &-1801780150871044885
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -114,24 +113,3 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!50 &1041831120671502616
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1711142420814505273}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
