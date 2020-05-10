@@ -27,12 +27,16 @@ public class SpawnGenerator:MonoBehaviour
 
     public void Generate()
     {
+        if (UIScript.Instance.chest - _currentSpawnable.value < 0)
+            return;
         GameObject obj = new GameObject("Spawnable");
         obj.transform.position = new Vector3(0.25f, Hands.Right.WristPosition.y, 0);
         SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
         render.sprite = _currentSpawnable.sprite;
         BoxCollider2D collider = obj.AddComponent<BoxCollider2D>();
         collider.size = Vector2.one;
+       
+        UIScript.Instance.chest -= _currentSpawnable.value;
         if (_currentSpawnable.type == TypeSpawnable.Ship)
         {
             Ship currentShip = obj.AddComponent<Ship>();
