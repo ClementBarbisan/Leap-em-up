@@ -25,7 +25,7 @@ public class Ship : Spawnable
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         base.Update();
         if (life <= 0)

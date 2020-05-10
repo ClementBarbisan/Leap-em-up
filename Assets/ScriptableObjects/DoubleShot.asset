@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 1
   bonusType: 1
   tag: 
-  value: 0
+  value: -5
   speed: 1
   shiftUpdate: 0.01
   distance: 0.001

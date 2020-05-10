@@ -20,13 +20,19 @@ public class UIScript : MonoBehaviour
     [SerializeField]
     private int _bonusLimit;
     public TextMeshProUGUI bonusAvailable;
+    public TextMeshProUGUI speedFireText;
+    public TextMeshProUGUI damagesText;
+    public TextMeshProUGUI valueText;
     public Image image;
 
-    public void SetSprite(Sprite sprite)
+    public void SetSprite(Sprite sprite, float damages, float speedFire, int value)
     {
         Debug.Log("SpriteOn");
         image.sprite = sprite;
         image.preserveAspect = true;
+        damagesText.text = damages.ToString();
+        speedFireText.text = speedFire.ToString();
+        valueText.text = value.ToString();
     }
     private void Awake()
     {

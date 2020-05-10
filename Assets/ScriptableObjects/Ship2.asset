@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ship2
   m_EditorClassIdentifier: 
   type: 0
+  bonusType: 0
   tag: 
-  value: 0
+  value: 8
   speed: 0.1
   shiftUpdate: 0.01
   distance: 0.001

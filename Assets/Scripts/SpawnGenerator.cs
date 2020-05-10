@@ -7,15 +7,22 @@ using UnityEngine;
 [RequireComponent(typeof(PathShip))]
 public class SpawnGenerator:MonoBehaviour
 {
-    private PathShip _currentPath;
+    public PathShip _currentPath;
     [SerializeField] 
     private List<TypeObject> _spawnables;
     [SerializeField]
     private TypeObject _currentSpawnable;
     private void Awake()
     {
-        _currentPath = GetComponent<PathShip>();
         _currentSpawnable = _spawnables[0];
+    }
+
+    private void Start()
+    {
+        float damages = 0;
+        foreach (TypeAmmo ammo in _currentSpawnable.weapons)
+            damages += ammo.damage;
+        UIScript.Instance.SetSprite(_currentSpawnable.sprite, damages, _currentSpawnable.speedFire, _currentSpawnable.value);
     }
 
     public void Generate()
@@ -85,6 +92,9 @@ public class SpawnGenerator:MonoBehaviour
         if (index >= _spawnables.Count)
             return;
         _currentSpawnable = _spawnables[index];
-        UIScript.Instance.SetSprite(_currentSpawnable.sprite);
+        float damages = 0;
+        foreach (TypeAmmo ammo in _currentSpawnable.weapons)
+            damages += ammo.damage;
+        UIScript.Instance.SetSprite(_currentSpawnable.sprite, damages, _currentSpawnable.speedFire, _currentSpawnable.value);
     }
 }

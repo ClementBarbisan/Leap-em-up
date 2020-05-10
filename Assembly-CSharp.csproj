@@ -246,6 +246,7 @@
      <Compile Include="Assets\LeapMotion\Core\Scripts\XR\XRHeightOffset.cs" />
      <Compile Include="Assets\Scripts\Ammo.cs" />
      <Compile Include="Assets\Scripts\AmmoEnemy.cs" />
+     <Compile Include="Assets\Scripts\Background.cs" />
      <Compile Include="Assets\Scripts\Bonus.cs" />
      <Compile Include="Assets\Scripts\Collectible.cs" />
      <Compile Include="Assets\Scripts\DoubleShot.cs" />

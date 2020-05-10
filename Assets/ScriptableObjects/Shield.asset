@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Shield
   m_EditorClassIdentifier: 
   type: 1
+  bonusType: 0
   tag: 
-  value: 0
+  value: -8
   speed: 1
   shiftUpdate: 0.01
   distance: 0.001

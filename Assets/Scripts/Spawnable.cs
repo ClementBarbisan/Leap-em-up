@@ -10,13 +10,13 @@ public class Spawnable : MonoBehaviour
     public List<Vector3> path;
     public int value = 0;
     public float speed;
-    private float _shift = -0.3f;
-    private int _index = 0;
+    protected float _shift = -0.3f;
+    protected int _index = 0;
     public float shiftUpdate= 0.01f;
     public float distance = 0.001f;
-    private float _startTime = 0;
-    private float _distTotal = 0;
-    private Vector3 _initPosition;
+    protected float _startTime = 0;
+    protected float _distTotal = 0;
+    protected Vector3 _initPosition;
     protected void Start()
     {
         this.gameObject.layer = 9;
