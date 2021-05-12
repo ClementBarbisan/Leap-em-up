@@ -7,9 +7,11 @@ public class Ammo : MonoBehaviour
 {
     public float speed;
     public int damage;
-    public int direction;
-
+    public float direction;
+    public Action<Ammo> action;
     public float timeGain;
+
+    public Ship generator;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -19,9 +21,13 @@ public class Ammo : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
-        if (transform.position.x < -0.5f || transform.position.x > 0.5f || transform.position.y < -0.5f || transform.position.y > 0.5f)
-            Destroy(this.gameObject);
-        transform.Translate(Mathf.Sin(direction * Mathf.Deg2Rad) * Time.deltaTime * speed, Mathf.Cos(direction * Mathf.Deg2Rad) * Time.deltaTime * speed, 0);
+        action(this);
+        // transform.Translate(Mathf.Sin(direction * Mathf.Deg2Rad) * Time.deltaTime * speed, Mathf.Cos(direction * Mathf.Deg2Rad) * Time.deltaTime * speed, 0);
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 
     private void OnCollisionStay2D(Collision2D other)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Leap;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,7 +10,6 @@ public class Ship : Spawnable
     public float speedFire;
     public int life;
     public List<TypeAmmo> weapons;
-
     protected float timeElapsed;
 
     public GameObject ammoPrefab;
@@ -28,6 +28,7 @@ public class Ship : Spawnable
     protected void Update()
     {
         base.Update();
+        
         if (life <= 0)
             Destroy(this.gameObject);
         if (timeElapsed >= speedFire)
@@ -35,14 +36,7 @@ public class Ship : Spawnable
             timeElapsed = 0;
             for (int i = 0; i < weapons.Count; i++)
             {
-                GameObject obj = Instantiate(ammoPrefab);
-                obj.transform.position = this.transform.position;
-                Ammo ammo = obj.GetComponent<Ammo>();
-                ammo.damage = weapons[i].damage;
-                ammo.direction = weapons[i].angle;
-                ammo.speed = weapons[i].speed;
-                ammo.timeGain = weapons[i].timeGain;
-                ammo.transform.position += weapons[i].relativePos;
+                weapons[i].Shot(ammoPrefab, transform.position);
             }
         }
         else
@@ -64,6 +58,6 @@ public class Ship : Spawnable
             Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag("PreBonus"))
-            Destroy(this.gameObject);
+            Destroy(other.gameObject);
     }
 }

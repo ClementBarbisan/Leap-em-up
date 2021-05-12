@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2982652053038583609, guid: e582d9077c8de41418a4278040e75eb4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 12
+  currentType: 0
 --- !u!61 &2635698391017183366
 BoxCollider2D:
   m_ObjectHideFlags: 0

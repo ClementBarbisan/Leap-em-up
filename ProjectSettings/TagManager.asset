@@ -50,3 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Parallax1
+    uniqueID: 1502024977
+    locked: 0
+  - name: Parallax2
+    uniqueID: 1266650169
+    locked: 0

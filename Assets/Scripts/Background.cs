@@ -21,9 +21,11 @@ public class Background : MonoBehaviour
             for (int j = 0; j < _nbBack * (i + 1); j++)
             {
                 GameObject obj = Instantiate(sprites[Random.Range(0, sprites.Count - 1)]);
+                obj.GetComponent<SpriteRenderer>().sortingOrder = -i-1;
+                obj.GetComponent<SpriteRenderer>().flipX = Random.Range(0, 1) == 0;
                 _background[i].Add(obj);
                 obj.transform.localScale /= (i + 1);
-                obj.transform.position = new Vector3(j * (_background[i][_background[i].Count - 1].transform.localScale.x * 8) - 0.25f, i *  _background[i][_background[i].Count - 1].transform.localScale.y * 5, 0);
+                obj.transform.position = new Vector3(j * (_background[i][_background[i].Count - 1].transform.localScale.x * 1.5f), i *  _background[i][_background[i].Count - 1].transform.localScale.y, 0);
             }
         }
     }
@@ -43,9 +45,11 @@ public class Background : MonoBehaviour
                     _background[i].Remove(sprite);
                     Destroy(sprite);
                     GameObject obj = Instantiate(sprites[Random.Range(0, sprites.Count - 1)]);
+                    obj.GetComponent<SpriteRenderer>().sortingOrder = -i-1;
+                    obj.GetComponent<SpriteRenderer>().flipX = Random.Range(0, 1) == 0;
                     _background[i].Add(obj);
                     obj.transform.localScale /= (i + 1);
-                    obj.transform.position = new Vector3(0.35f, i *  _background[i][_background[i].Count - 1].transform.localScale.y * 5, 0);
+                    obj.transform.position = new Vector3(0.5f, i *  _background[i][_background[i].Count - 1].transform.localScale.y, 0);
                 }
 
                 j++;

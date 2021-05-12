@@ -27,12 +27,11 @@ public class UIScript : MonoBehaviour
 
     public void SetSprite(Sprite sprite, float damages, float speedFire, int value)
     {
-        Debug.Log("SpriteOn");
         image.sprite = sprite;
         image.preserveAspect = true;
-        damagesText.text = damages.ToString();
-        speedFireText.text = speedFire.ToString();
-        valueText.text = value.ToString();
+        damagesText.text = "Damages :" + Environment.NewLine + damages.ToString();
+        speedFireText.text = "Speed fire : " + Environment.NewLine + speedFire.ToString();
+        valueText.text = "Value : " + Environment.NewLine + value.ToString();
     }
     private void Awake()
     {
@@ -48,10 +47,13 @@ public class UIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeUI.text = ((int)(remainingTime / 60)).ToString("00") + ":" + ((int)(remainingTime % 60)).ToString("00");
-        remainingTime -= Time.deltaTime;
-        chestUI.text = chest.ToString();
-        bonusAvailable.text = ((int)bonus).ToString();
+        if (remainingTime > 0)
+        {
+            timeUI.text = "Time : " + ((int)(remainingTime / 60)).ToString("00") + ":" + ((int)(remainingTime % 60)).ToString("00");
+            remainingTime -= Time.deltaTime;   
+        }
+        chestUI.text = "Chest : " + Environment.NewLine + chest.ToString();
+        bonusAvailable.text = "Bonus : " + Environment.NewLine + ((int)bonus).ToString();
         if (bonus < _bonusLimit)
             bonus += _bonusReg * Time.deltaTime;
     }

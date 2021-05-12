@@ -8,10 +8,17 @@ public class DoubleShot : PreBonus
     public float speedFire = 0.2f;
     public GameObject ammoPrefab;
     public List<TypeAmmo> weapons;
+
+    private Ship currentShip;
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentShip = GetComponentInParent<Ship>();
+        if (currentShip == null)
+        {
+            Debug.LogError("No ship for this bonus");
+            enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -22,14 +29,7 @@ public class DoubleShot : PreBonus
             _timeElapsed = 0;
             for (int i = 0; i < weapons.Count; i++)
             {
-                GameObject obj = Instantiate(ammoPrefab);
-                obj.transform.position = this.transform.position;
-                AmmoEnemy ammo = obj.GetComponent<AmmoEnemy>();
-                ammo.damage = weapons[i].damage;
-                ammo.direction = weapons[i].angle;
-                ammo.speed = weapons[i].speed;
-                ammo.timeGain = weapons[i].timeGain;
-                ammo.transform.position += weapons[i].relativePos;
+                weapons[i].Shot(ammoPrefab, transform.position);
             }
         }
 

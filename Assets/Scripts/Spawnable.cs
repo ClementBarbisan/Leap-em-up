@@ -26,6 +26,11 @@ public class Spawnable : MonoBehaviour
         _initPosition = transform.position;
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     protected void Update()
     {
         if (this.transform.position.x < -0.5f)

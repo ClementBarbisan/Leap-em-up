@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 12
+  currentType: 1
   speedFire: 0.2
   ammoPrefab: {fileID: 5725843255699366778, guid: 7ceec6df40359b24d9488d2235e129c5,
     type: 3}

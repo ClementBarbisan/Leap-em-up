@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17ab7143c638a1947b1d20b788499284, type: 3}
   timeGain: 0
-  relativePos: {x: 0, y: 0.01, z: 0}
-  speed: 0.1
+  relativePos: {x: 0, y: 0.02, z: 0}
+  initialSpeed: -0.1
   damage: 1
-  angle: 80
+  angle: 2849.2974
+  actionIndex: 1
