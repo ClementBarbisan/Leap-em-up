@@ -929,7 +929,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 983c52e1e2bf37e478f9c9609feba7e8, type: 2}
+      objectReference: {fileID: 2100000, guid: c5b9e8be6efc5c74aad1024a1e60cc0b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2276723046d707c4f94d431ceb80ab92, type: 3}
 --- !u!1 &128350063 stripped
@@ -2924,7 +2924,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df34662741f18714ba9cdd8566f1a4e2, type: 2}
   - {fileID: 11400000, guid: 824440cf00f5944439960ade7ec1e800, type: 2}
   - {fileID: 11400000, guid: 539d1ffccf519824890bfad400ce92a4, type: 2}
-  ammos: []
   ammoPrefab: {fileID: 5725843255699366778, guid: 7ceec6df40359b24d9488d2235e129c5,
     type: 3}
   nbHits: 0
@@ -4219,6 +4218,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 983c52e1e2bf37e478f9c9609feba7e8, type: 2}
+      objectReference: {fileID: 2100000, guid: c5b9e8be6efc5c74aad1024a1e60cc0b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa010a1e75292e49a24f3f71bb9cddb, type: 3}
