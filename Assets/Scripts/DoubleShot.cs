@@ -19,6 +19,11 @@ public class DoubleShot : PreBonus
             Debug.LogError("No ship for this bonus");
             enabled = false;
         }
+
+        foreach (TypeAmmo ammo in weapons)
+        {
+            ammo.Awake();
+        }
     }
 
     // Update is called once per frame

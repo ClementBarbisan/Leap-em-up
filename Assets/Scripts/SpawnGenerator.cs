@@ -27,18 +27,16 @@ public class SpawnGenerator:MonoBehaviour
 
     public void Generate()
     {
-        if (UIScript.Instance.chest - _currentSpawnable.value < 0)
-            return;
-        GameObject obj = new GameObject("Spawnable");
-        obj.transform.position = new Vector3(0.25f, Hands.Right.WristPosition.y, 0);
-        SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
-        render.sprite = _currentSpawnable.sprite;
-        BoxCollider2D collider = obj.AddComponent<BoxCollider2D>();
-        collider.size = Vector2.one;
-       
-        UIScript.Instance.chest -= _currentSpawnable.value;
-        if (_currentSpawnable.type == TypeSpawnable.Ship)
+        if (_currentSpawnable.type == TypeSpawnable.Ship && UIScript.Instance.chest - _currentSpawnable.value >= 0)
         {
+            GameObject obj = new GameObject("Spawnable");
+            obj.transform.position = new Vector3(0.25f, Hands.Right != null ? Hands.Right.WristPosition.y : 0, 0);
+            SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
+            render.sprite = _currentSpawnable.sprite;
+            BoxCollider2D collider = obj.AddComponent<BoxCollider2D>();
+            collider.size = Vector2.one;
+       
+            UIScript.Instance.chest -= _currentSpawnable.value;
             Ship currentShip = obj.AddComponent<Ship>();
             currentShip.path = new List<Vector3>(_currentPath.path);
             currentShip.weapons = _currentSpawnable.weapons;
@@ -52,6 +50,14 @@ public class SpawnGenerator:MonoBehaviour
         }
         else if (_currentSpawnable.type == TypeSpawnable.Bonus && UIScript.Instance.bonus >= 1)
         {
+            GameObject obj = new GameObject("Spawnable");
+            obj.transform.position = new Vector3(0.25f, Hands.Right != null ? Hands.Right.WristPosition.y : 0, 0);
+            SpriteRenderer render = obj.AddComponent<SpriteRenderer>();
+            render.sprite = _currentSpawnable.sprite;
+            BoxCollider2D collider = obj.AddComponent<BoxCollider2D>();
+            collider.size = Vector2.one;
+       
+            UIScript.Instance.chest -= _currentSpawnable.value;
             Bonus currentBonus = obj.AddComponent<Bonus>();
             currentBonus.path = new List<Vector3>(_currentPath.path);
             currentBonus.shiftUpdate = _currentSpawnable.shiftUpdate;

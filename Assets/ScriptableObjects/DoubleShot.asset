@@ -23,5 +23,7 @@ MonoBehaviour:
   time: 12
   speedFire: 0
   life: 1
-  weapons: []
+  weapons:
+  - {fileID: 11400000, guid: 398d4e558d174f74e9f5e5101e723d84, type: 2}
+  - {fileID: 11400000, guid: 398d4e558d174f74e9f5e5101e723d84, type: 2}
   prefab: {fileID: 4929430692227048122, guid: 7ffa20ff64b563b4a91c9f8bdaa54d87, type: 3}

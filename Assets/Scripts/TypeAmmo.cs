@@ -36,7 +36,7 @@ public class TypeAmmo : ScriptableObject
 
      public void Awake()
      {
-          if (Application.isPlaying)
+          if (displaceAmmo.Count == 0 && ammoInstance.Count == 0)
           {
                angle = initialAngle;
                displaceAmmo.Add(typeAmmo.UpdateAmmoCos, UpdateAmmoCos);
