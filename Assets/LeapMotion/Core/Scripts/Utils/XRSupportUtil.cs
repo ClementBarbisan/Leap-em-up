@@ -31,31 +31,35 @@ namespace Leap.Unity {
       #endif
     }
 
-    public static bool IsXRDevicePresent() {
-      #if UNITY_2017_2_OR_NEWER
-      return XRDevice.isPresent;
-      #else
-      return VRDevice.isPresent;
-      #endif
+    public static bool IsXRDevicePresent()
+    {
+      return false;
+      // #if UNITY_2017_2_OR_NEWER
+      // return XRDevice.isPresent;
+      // #else
+      // return VRDevice.isPresent;
+      // #endif
     }
 
     static bool outputPresenceWarning = false;
-    public static bool IsUserPresent(bool defaultPresence = true) {
-      #if UNITY_2017_2_OR_NEWER
-      var userPresence = XRDevice.userPresence;
-      if (userPresence == UserPresenceState.Present) {
-        return true;
-      } else if (!outputPresenceWarning && userPresence == UserPresenceState.Unsupported) {
-        Debug.LogWarning("XR UserPresenceState unsupported (XR support is probably disabled).");
-        outputPresenceWarning = true;
-      }
-      #else
-      if (!outputPresenceWarning){
-        Debug.LogWarning("XR UserPresenceState is only supported in 2017.2 and newer.");
-        outputPresenceWarning = true;
-      }
-      #endif
-      return defaultPresence;
+    public static bool IsUserPresent(bool defaultPresence = true)
+    {
+      return false;
+      // #if UNITY_2017_2_OR_NEWER
+      // var userPresence = XRDevice.userPresence;
+      // if (userPresence == UserPresenceState.Present) {
+      //   return true;
+      // } else if (!outputPresenceWarning && userPresence == UserPresenceState.Unsupported) {
+      //   Debug.LogWarning("XR UserPresenceState unsupported (XR support is probably disabled).");
+      //   outputPresenceWarning = true;
+      // }
+      // #else
+      // if (!outputPresenceWarning){
+      //   Debug.LogWarning("XR UserPresenceState is only supported in 2017.2 and newer.");
+      //   outputPresenceWarning = true;
+      // }
+      // #endif
+      // return defaultPresence;
     }
 
     public static Vector3 GetXRNodeCenterEyeLocalPosition() {
