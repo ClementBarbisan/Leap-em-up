@@ -15,7 +15,7 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 17ab7143c638a1947b1d20b788499284, type: 3}
   timeGain: 0
   relativePos: {x: 0, y: -0.02, z: 0}
-  initialSpeed: -0.1
+  initialSpeed: 0.1
   damage: 1
-  angle: 2819.104
+  angle: 90
   actionIndex: 0

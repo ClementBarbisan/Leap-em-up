@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    public float speed;
     public int damage;
-    public float direction;
     public Action<Ammo> action;
     public float timeGain;
 
-    public Ship generator;
+    public float angle;
+
+    public float speed;
     // Start is called before the first frame update
     protected void Start()
     {

@@ -22,6 +22,13 @@ public class Ship : Spawnable
         body.gravityScale = 0;
         body.mass = 0;
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
+        for (int i = 0; i < weapons.Count; i++)
+            weapons[i].Awake();
+    }
+
+    private void OnBecameInvisible()
+    {
+        
     }
 
     // Update is called once per frame
@@ -36,7 +43,7 @@ public class Ship : Spawnable
             timeElapsed = 0;
             for (int i = 0; i < weapons.Count; i++)
             {
-                weapons[i].Shot(ammoPrefab, transform.position);
+                weapons[i].Shot(ammoPrefab, transform.position, weapons[i]);
             }
         }
         else

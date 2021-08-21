@@ -29,7 +29,7 @@ public class DoubleShot : PreBonus
             _timeElapsed = 0;
             for (int i = 0; i < weapons.Count; i++)
             {
-                weapons[i].Shot(ammoPrefab, transform.position);
+                weapons[i].Shot(ammoPrefab, transform.position, weapons[i]);
             }
         }
 
