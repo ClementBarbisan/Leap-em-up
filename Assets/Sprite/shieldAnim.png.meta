@@ -65,6 +65,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -73,9 +75,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -96,9 +98,12 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -156,7 +161,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: f6788de78f25c2a30800000000000000
-      internalID: 4191816580408575855
+      internalID: -2982652053038583609
       vertices: []
       indices: 
       edges: []
@@ -177,7 +182,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1277b75b4cbc21cb0800000000000000
-      internalID: -4894625799279511775
+      internalID: 8727882170126099824
       vertices: []
       indices: 
       edges: []
@@ -402,6 +407,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      shieldAnim_4: -6168956355114631395
+      shieldAnim_8: 6526327882827294165
+      shieldAnim_2: 2478709423311739589
+      shieldAnim_0: -2982652053038583609
+      shieldAnim_11: -5568867737586981345
+      shieldAnim_9: 8728385871782688290
+      shieldAnim_6: 1052192342907087593
+      shieldAnim_5: 2647658505269207719
+      shieldAnim_1: 8727882170126099824
+      shieldAnim_3: 6435009911174021866
+      shieldAnim_10: -917161063215812068
+      shieldAnim_7: -4303752643653825108
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
