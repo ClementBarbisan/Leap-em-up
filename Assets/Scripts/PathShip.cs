@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
-using RiggedFinger = Leap.Unity.RiggedFinger;
 
 public class PathShip : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class PathShip : MonoBehaviour
     private float _distanceBetweenPoint = 0.01f;
     [FormerlySerializedAs("timeBetweenPoint")] [SerializeField]
     private float _timeBetweenPoint = 0.005f;
-    private RiggedFinger finger;
+    private Leap.Finger finger;
     [SerializeField]
     private int limit = 10;
 
@@ -21,15 +20,16 @@ public class PathShip : MonoBehaviour
     private void Awake()
     {
         path = new List<Vector3>();
-        finger = GetComponent<RiggedFinger>();
+        finger = GetComponent<Leap.Finger>();
     }
 
     IEnumerator currentPath()
     {
         while (true)
         {
-            if (path.Count < 1 || Vector3.Distance(path[path.Count - 1], new Vector3(finger.GetTipPosition().x,finger.GetTipPosition().y, 0)) > _distanceBetweenPoint)
-                path.Add(new Vector3(finger.GetTipPosition().x, finger.GetTipPosition().y, 0));
+            if (path.Count < 1 || Vector3.Distance(path[path.Count - 1], new Vector3(finger.TipPosition.x,
+                    finger.TipPosition.y, 0)) > _distanceBetweenPoint)
+                path.Add(new Vector3(finger.TipPosition.x, finger.TipPosition.y, 0));
             yield return new WaitForSeconds(_timeBetweenPoint);
         }
     }

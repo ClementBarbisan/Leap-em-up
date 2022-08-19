@@ -75,26 +75,26 @@ public class SpawnGenerator:MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            _currentSpawnable = _spawnables[0];
-            Generate();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            _currentSpawnable = _spawnables[1];
-            Generate();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            _currentSpawnable = _spawnables[2];
-            Generate();
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            _currentSpawnable = _spawnables[3];
-            Generate();
-        }
+        // if (Input.GetKeyDown(KeyCode.A))
+        // {
+        //     _currentSpawnable = _spawnables[0];
+        //     Generate();
+        // }
+        // if (Input.GetKeyDown(KeyCode.B))
+        // {
+        //     _currentSpawnable = _spawnables[1];
+        //     Generate();
+        // }
+        // if (Input.GetKeyDown(KeyCode.C))
+        // {
+        //     _currentSpawnable = _spawnables[2];
+        //     Generate();
+        // }
+        // if (Input.GetKeyDown(KeyCode.D))
+        // {
+        //     _currentSpawnable = _spawnables[3];
+        //     Generate();
+        // }
     }
 
     public void SetIndex(int index)

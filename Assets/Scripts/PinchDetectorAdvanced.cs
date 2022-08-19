@@ -5,18 +5,18 @@ using Leap.Unity.Attributes;
 using UnityEngine.Serialization;
 
 namespace Leap.Unity {
-    [RequireComponent(typeof(RiggedFinger))]
+    [RequireComponent(typeof(Finger))]
     public class PinchDetectorAdvanced:PinchDetector
     {
         [FormerlySerializedAs("finger")] [SerializeField]
-        private RiggedFinger _finger;
+        private Finger _finger;
         [FormerlySerializedAs("typeFinger")] [SerializeField]
         private Finger.FingerType _typeFinger;
         protected override void Awake()
         {
             base.Awake();
-            _finger = this.GetComponent<RiggedFinger>();
-            _typeFinger = _finger.fingerType;
+            _finger = this.GetComponent<Finger>();
+            _typeFinger = _finger.Type;
             if (_typeFinger == Finger.FingerType.TYPE_THUMB)
             {
                 Debug.LogWarning("Finger type is Thumb : Can't pinch. Script disabled.");
@@ -41,8 +41,8 @@ namespace Leap.Unity {
                 }
           
                 _distance = GetPinchDistance(hand);
-                _rotation = hand.Basis.CalculateRotation();
-                _position = ((hand.Fingers[0].TipPosition + hand.Fingers[(int)_typeFinger].TipPosition) * .5f).ToVector3();
+                _rotation = hand.Basis.rotation;
+                _position = ((hand.Fingers[0].TipPosition + hand.Fingers[(int)_typeFinger].TipPosition) * .5f);
           
                 if (IsActive) {
                   if (_distance > DeactivateDistance) {
@@ -68,10 +68,10 @@ namespace Leap.Unity {
                 }
         }
 
-        protected override float GetPinchDistance(Hand hand)
+        protected float GetPinchDistance(Hand hand)
         {
-            var indexTipPosition = hand.Fingers[(int)_typeFinger].TipPosition.ToVector3();
-            var thumbTipPosition = hand.GetThumb().TipPosition.ToVector3();
+            var indexTipPosition = hand.Fingers[(int)_typeFinger].TipPosition;
+            var thumbTipPosition = hand.GetThumb().TipPosition;
             return Vector3.Distance(indexTipPosition, thumbTipPosition);
         }
             
