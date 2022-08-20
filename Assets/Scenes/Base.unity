@@ -2271,6 +2271,10 @@ MonoBehaviour:
   speedFire: 0.2
   life: 500
   weapons:
+  - {fileID: 11400000, guid: febc6235140240749aa1ec5beafbfb96, type: 2}
+  - {fileID: 11400000, guid: ea5a32a984e939a478acb3c9be2e287b, type: 2}
+  - {fileID: 11400000, guid: df34662741f18714ba9cdd8566f1a4e2, type: 2}
+  - {fileID: 11400000, guid: 824440cf00f5944439960ade7ec1e800, type: 2}
   - {fileID: 11400000, guid: 539d1ffccf519824890bfad400ce92a4, type: 2}
   - {fileID: 11400000, guid: 398d4e558d174f74e9f5e5101e723d84, type: 2}
   ammoPrefab: {fileID: 5725843255699366778, guid: 7ceec6df40359b24d9488d2235e129c5,

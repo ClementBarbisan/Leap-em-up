@@ -18,6 +18,6 @@ MonoBehaviour:
   speed: 0.1
   damage: 1
   initialAngle: 90
-  deviation: 0
+  deviation: 10
   actionIndex: 2
   instance: 0

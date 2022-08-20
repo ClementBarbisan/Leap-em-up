@@ -24,6 +24,6 @@ MonoBehaviour:
   speedFire: 0
   life: 1
   weapons:
-  - {fileID: 11400000, guid: 398d4e558d174f74e9f5e5101e723d84, type: 2}
-  - {fileID: 11400000, guid: 398d4e558d174f74e9f5e5101e723d84, type: 2}
+  - {fileID: 11400000, guid: e6699456be1839846adba918f16e4fd0, type: 2}
+  - {fileID: 11400000, guid: db47a9f69b27de649a0ba0c54109d1c2, type: 2}
   prefab: {fileID: 4929430692227048122, guid: 7ffa20ff64b563b4a91c9f8bdaa54d87, type: 3}

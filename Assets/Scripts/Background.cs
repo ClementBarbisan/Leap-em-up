@@ -25,7 +25,7 @@ public class Background : MonoBehaviour
                 obj.GetComponent<SpriteRenderer>().flipX = Random.Range(0, 1) == 0;
                 _background[i].Add(obj);
                 obj.transform.localScale /= (i + 0.5f);
-                obj.transform.position = new Vector3(j * (_background[i][_background[i].Count - 1].transform.localScale.x * 1.5f), i *  _background[i][_background[i].Count - 1].transform.localScale.y, 0);
+                obj.transform.position = new Vector3(j * (_background[i][_background[i].Count - 1].transform.localScale.x * 1.5f), i *  _background[i][_background[i].Count - 1].transform.localScale.y, Random.Range(-0.1f, 0.1f));
             }
         }
     }
@@ -49,7 +49,7 @@ public class Background : MonoBehaviour
                     obj.GetComponent<SpriteRenderer>().flipX = Random.Range(0, 1) == 0;
                     _background[i].Add(obj);
                     obj.transform.localScale /= (i + 0.5f);
-                    obj.transform.position = new Vector3(0.65f, i *  _background[i][_background[i].Count - 1].transform.localScale.y, 0);
+                    obj.transform.position = new Vector3(0.65f, i *  _background[i][_background[i].Count - 1].transform.localScale.y, Random.Range(-0.1f, 0.1f));
                 }
 
                 j++;

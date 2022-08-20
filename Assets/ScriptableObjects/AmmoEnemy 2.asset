@@ -17,7 +17,7 @@ MonoBehaviour:
   relativePos: {x: 0, y: 0.02, z: 0}
   speed: 0.1
   damage: 1
-  initialAngle: 90
-  deviation: 0
+  initialAngle: 180
+  deviation: 10
   actionIndex: 2
   instance: 0

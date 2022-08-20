@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aa58b71c5c0568459c0fa971c3fc295, type: 3}
-  m_Name: AmmoEnemy 6
+  m_Name: AmmoEnemy 8
   m_EditorClassIdentifier: 
   sprite: {fileID: 21300000, guid: 17ab7143c638a1947b1d20b788499284, type: 3}
   timeGain: 0
-  relativePos: {x: 0.02, y: -0.02, z: 0}
+  relativePos: {x: 0, y: 0.02, z: 0}
   speed: 0.1
   damage: 1
-  initialAngle: 225
-  deviation: 10
+  initialAngle: 90
+  deviation: 0
   actionIndex: 2
-  instance: 0
+  instance: 1

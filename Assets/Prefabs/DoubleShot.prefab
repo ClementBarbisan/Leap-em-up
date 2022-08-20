@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -50,8 +51,8 @@ MonoBehaviour:
   ammoPrefab: {fileID: 5725843255699366778, guid: 7ceec6df40359b24d9488d2235e129c5,
     type: 3}
   weapons:
-  - {fileID: 11400000, guid: febc6235140240749aa1ec5beafbfb96, type: 2}
-  - {fileID: 11400000, guid: ea5a32a984e939a478acb3c9be2e287b, type: 2}
+  - {fileID: 11400000, guid: e6699456be1839846adba918f16e4fd0, type: 2}
+  - {fileID: 11400000, guid: db47a9f69b27de649a0ba0c54109d1c2, type: 2}
 --- !u!61 &5016757243671804943
 BoxCollider2D:
   m_ObjectHideFlags: 0
