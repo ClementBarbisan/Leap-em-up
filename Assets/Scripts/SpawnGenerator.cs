@@ -15,6 +15,7 @@ public class SpawnGenerator:MonoBehaviour
     private void Awake()
     {
         _currentSpawnable = _spawnables[0];
+        _currentPath = GetComponent<PathShip>();
     }
 
     private void Start()

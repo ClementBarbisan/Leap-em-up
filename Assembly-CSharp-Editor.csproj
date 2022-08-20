@@ -750,6 +750,9 @@
      <Reference Include="Ultraleap.Tracking.HandRays.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.HandRays.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.IK.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
      </Reference>
@@ -768,6 +771,9 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEngine.SpatialTracking">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
      </Reference>
@@ -785,6 +791,9 @@
      </Reference>
      <Reference Include="Unity.XR.CoreUtils.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.XR.CoreUtils.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Ultraleap.Tracking.HandRays">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.HandRays.dll</HintPath>
@@ -807,11 +816,14 @@
      <Reference Include="Ultraleap.Tracking.InteractionEngine">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.InteractionEngine.dll</HintPath>
      </Reference>
-     <Reference Include="Ultraleap.Tracking.ImageDistort">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.ImageDistort.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Ultraleap.Tracking.Core">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Ultraleap.Tracking.ImageDistort">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.ImageDistort.dll</HintPath>
      </Reference>
      <Reference Include="Ultraleap.Tracking.UIInput.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.UIInput.Editor.dll</HintPath>
@@ -831,6 +843,9 @@
      <Reference Include="Unity.2D.Animation.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Editor">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Barracuda.BurstBLAS">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Barracuda.BurstBLAS.dll</HintPath>
      </Reference>
@@ -849,6 +864,9 @@
      <Reference Include="Unity.Barracuda">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Barracuda.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.VisualEffectGraph.Runtime">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
@@ -857,6 +875,9 @@
      </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.Interaction.Toolkit">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
@@ -867,8 +888,8 @@
      <Reference Include="Unity.2D.Psdimporter.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.InternalAPIEditorBridge.001">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Leap.Unity.Preview.XRInteractionToolkit.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Leap.Unity.Preview.XRInteractionToolkit.Editor.dll</HintPath>
@@ -876,8 +897,14 @@
      <Reference Include="Unity.ProBuilder.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
@@ -918,6 +945,9 @@
      <Reference Include="Unity.XR.CoreUtils">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.XR.CoreUtils.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
      <Reference Include="Ultraleap.Tracking.UIInput">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Ultraleap.Tracking.UIInput.dll</HintPath>
      </Reference>
@@ -942,44 +972,14 @@
      <Reference Include="Unity.Barracuda.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Barracuda.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.2D.SpriteShape.Runtime">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.ML-Agents.Editor">
      <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.ML-Agents.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualEffectGraph.Editor">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualEffectGraph.Runtime">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Searcher.Editor">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.Editor">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.ShaderGraph.Editor">
-     <HintPath>J:\Leap-em-up\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -17,7 +17,7 @@ MonoBehaviour:
   tag: 
   value: 8
   speed: 0.1
-  shiftUpdate: 0.01
+  shiftUpdate: -0.01
   distance: 0.001
   sprite: {fileID: 21300000, guid: 010058d3684c28540880c9a7d06b434c, type: 3}
   time: 0

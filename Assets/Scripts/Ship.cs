@@ -28,7 +28,7 @@ public class Ship : Spawnable
 
     private void OnBecameInvisible()
     {
-        
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

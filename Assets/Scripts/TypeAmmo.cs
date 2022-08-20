@@ -9,7 +9,7 @@ public class TypeAmmo : ScriptableObject
 {
      public enum typeInstance
      {
-          RotateAmmo,
+          RotatedAmmo,
           StandardAmmo
      };
 
@@ -17,7 +17,7 @@ public class TypeAmmo : ScriptableObject
      {
           UpdateAmmoCos,
           UpdateAmmoSin,
-          UpdateAmmoRotate,
+          // UpdateAmmoRotate,
           UpdateAmmo
      };
 
@@ -41,9 +41,9 @@ public class TypeAmmo : ScriptableObject
                angle = initialAngle;
                displaceAmmo.Add(typeAmmo.UpdateAmmoCos, UpdateAmmoCos);
                displaceAmmo.Add(typeAmmo.UpdateAmmoSin, UpdateAmmoSin);
-               displaceAmmo.Add(typeAmmo.UpdateAmmoRotate, UpdateAmmoRotate);
+               // displaceAmmo.Add(typeAmmo.UpdateAmmoRotate, UpdateAmmoRotate);
                displaceAmmo.Add(typeAmmo.UpdateAmmo, UpdateAmmo);
-               ammoInstance.Add(typeInstance.RotateAmmo, ShotRotate);
+               ammoInstance.Add(typeInstance.RotatedAmmo, ShotRotate);
                ammoInstance.Add(typeInstance.StandardAmmo, ShotStandard);
           }
      }

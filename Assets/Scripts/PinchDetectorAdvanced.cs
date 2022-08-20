@@ -1,27 +1,19 @@
-﻿using Leap.Unity;
+﻿using System.Collections.Generic;
+using Leap.Unity;
 
 using UnityEngine;
 using Leap.Unity.Attributes;
+using Leap.Unity.HandsModule;
 using UnityEngine.Serialization;
 
 namespace Leap.Unity {
-    [RequireComponent(typeof(Finger))]
     public class PinchDetectorAdvanced:PinchDetector
     {
-        [FormerlySerializedAs("finger")] [SerializeField]
-        private Finger _finger;
         [FormerlySerializedAs("typeFinger")] [SerializeField]
-        private Finger.FingerType _typeFinger;
+        public Finger.FingerType _typeFinger;
         protected override void Awake()
         {
             base.Awake();
-            _finger = this.GetComponent<Finger>();
-            _typeFinger = _finger.Type;
-            if (_typeFinger == Finger.FingerType.TYPE_THUMB)
-            {
-                Debug.LogWarning("Finger type is Thumb : Can't pinch. Script disabled.");
-                this.enabled = false;
-            }
         }
 
         protected override void ensureUpToDate()

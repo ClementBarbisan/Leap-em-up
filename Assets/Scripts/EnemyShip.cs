@@ -18,7 +18,7 @@ public class EnemyShip : Ship
     {
         for (int i = 0; i < nbPath; i++)
         {
-            path.Add(new Vector3(this.transform.position.x, UnityEngine.Random.Range(-0.2f, 0.2f), 0));
+            path.Add(new Vector3(this.transform.position.x, UnityEngine.Random.Range(-0.1f, 0.2f), 0));
         }
 
         _shift = 0;
